@@ -1,14 +1,16 @@
 import './App.css';
 import React from 'react';
-import {AllCards,Header} from './components';;
+import HomePage from './pages/HomePage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      {/* <Card name="Harry Potter and the Deathly Hallows (Harry Potter, #7)" rating={4.5} id={1} Author="JK Rowling" /> */}
-      {/* <Header /> */}
-      <Header/>
-      <AllCards />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
